@@ -1,0 +1,12 @@
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\ChallengeApplication.java
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\exceptions\InternalException.java
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\services\FileService.java
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\controllers\ErrorController.java
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\exceptions\NotAuthorizedException.java
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\services\TaskService.java
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\exceptions\NotFoundException.java
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\model\ProjectGenerationTaskRepository.java
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\security\SimpleHeaderFilter.java
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\controllers\TaskController.java
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\security\CorsConfiguration.java
+G:\Jobs Recruitement Task\Celonis\Backend_Challenge\Backend_Challenge_\src\main\java\com\celonis\challenge\model\ProjectGenerationTask.java
