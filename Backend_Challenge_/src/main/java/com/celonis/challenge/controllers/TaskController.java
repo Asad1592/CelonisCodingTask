@@ -3,7 +3,6 @@ package com.celonis.challenge.controllers;
 import com.celonis.challenge.model.ProjectGenerationTask;
 import com.celonis.challenge.services.FileService;
 import com.celonis.challenge.services.TaskService;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +19,7 @@ public class TaskController {
 
     private final FileService fileService;
 
-    public TaskController(@Lazy TaskService taskService,
+    public TaskController(TaskService taskService,
                           FileService fileService) {
         this.taskService = taskService;
         this.fileService = fileService;
@@ -62,6 +61,22 @@ public class TaskController {
     @GetMapping("/{taskId}/result")
     public ResponseEntity<FileSystemResource> getResult(@PathVariable String taskId) {
         return fileService.getTaskResult(taskId);
+    }
+
+    @PutMapping("/monitor/{taskId}")
+    public ProjectGenerationTask monitorTask(@PathVariable String taskId, @RequestBody @Valid ProjectGenerationTask projectGenerationTask) {
+        return taskService.monitorTask(taskId, projectGenerationTask);
+    }
+
+    @GetMapping("/monitor/{taskId}")
+    public ProjectGenerationTask getMonitorTask(@PathVariable String taskId) {
+        return taskService.getMonitorTask(taskId);
+    }
+
+    @DeleteMapping("/clean/")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void cleanTask() {
+        taskService.clean();
     }
 
 }

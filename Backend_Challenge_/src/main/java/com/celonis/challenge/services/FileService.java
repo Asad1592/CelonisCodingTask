@@ -1,9 +1,14 @@
 package com.celonis.challenge.services;
 
-import com.celonis.challenge.exceptions.InternalException;
-import com.celonis.challenge.model.ProjectGenerationTask;
-import com.celonis.challenge.model.ProjectGenerationTaskRepository;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+
 import org.apache.commons.io.IOUtils;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -11,8 +16,9 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-import java.io.*;
-import java.net.URL;
+import com.celonis.challenge.exceptions.InternalException;
+import com.celonis.challenge.model.ProjectGenerationTask;
+import com.celonis.challenge.model.ProjectGenerationTaskRepository;
 
 @Component
 public class FileService {
@@ -21,7 +27,7 @@ public class FileService {
 
     private final ProjectGenerationTaskRepository projectGenerationTaskRepository;
 
-    public FileService(TaskService taskService,
+    public FileService(@Lazy TaskService taskService,
                        ProjectGenerationTaskRepository projectGenerationTaskRepository) {
         this.taskService = taskService;
         this.projectGenerationTaskRepository = projectGenerationTaskRepository;

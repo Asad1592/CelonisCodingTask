@@ -10,7 +10,6 @@ import java.util.Date;
 
 @Entity
 public class ProjectGenerationTask {
-
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
@@ -19,6 +18,34 @@ public class ProjectGenerationTask {
     private String name;
 
     private Date creationDate;
+    //Task 2
+    private int x;
+    private int y;
+    private String currentState;
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public String getCurrentState() {
+        return currentState;
+    }
+
+    public void setCurrentState(String currentState) {
+        this.currentState = currentState;
+    }
 
     @JsonIgnore
     private String storageLocation;
@@ -54,5 +81,4 @@ public class ProjectGenerationTask {
     public void setStorageLocation(String storageLocation) {
         this.storageLocation = storageLocation;
     }
-
 }
